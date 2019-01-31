@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)https://mganeko.github.io/aframe/g.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Go 360Go Skyway</title>
+  <meta name="description" content="Go to 360 Video — A-Frame Skyway">
+</head>
+
+<body onload="setFocusToRoom()">
+  <h1>Go to 360Go Skyway</h1>
+  <form id="form_go" action="https://mganeko.github.io/aframe/go.html" method="GET">
+    Room:<input id="roomname_text" name="room" type="text" size="32" value="go">
+    <input type="submit">
+  </form>
+
+  <script>
+    document.onkeydown = function (event) {
+      if (event.keyCode == 13) {
+        document.getElementById('form_go').submit();
+      }
+    };
+
+    function setFocusToRoom() {
+      const input =  document.getElementById('roomname_text');
+      const len = input.value.length;
+      input.focus();
+      input.setSelectionRange(len, len);
+    }
+  </script>
+
+
+</body></html>
